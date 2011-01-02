@@ -10,7 +10,7 @@
 
 @implementation Document
 
-- (id)init {
+- (id) init {
     self = [super init];
     if (self) {
     }
@@ -55,6 +55,11 @@
 			     userInfo: NULL];
     }
     return YES;
+}
+
+
+- (IBAction) insertLayer: (id) sender {
+    NSLog(@"Inserting layer...");
 }
 
 @end

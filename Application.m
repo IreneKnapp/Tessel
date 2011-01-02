@@ -7,6 +7,7 @@
 //
 
 #import "Application.h"
+#import "Document.h"
 
 
 @implementation Application
@@ -40,7 +41,6 @@
 
 
 - (void) mainWindowChangedNotification: (NSNotification *) notification {
-    NSLog(@"Updating document-menu-enabled.");
     [self willChangeValueForKey: @"documentMenuEnabled"];
     [self didChangeValueForKey: @"documentMenuEnabled"];
 }
@@ -61,7 +61,14 @@
 
 
 - (IBAction) documentInsertLayer: (id) sender {
-    NSLog(@"TODO.");
+    NSDocumentController *documentController
+	= [NSDocumentController sharedDocumentController];
+    Document *document = [documentController currentDocument];
+    if(document) {
+	[document insertLayer: sender];
+    } else {
+	NSBeep();
+    }
 }
 
 @end

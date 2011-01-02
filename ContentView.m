@@ -20,10 +20,10 @@
 
 
 - (void) drawRect: (NSRect) dirtyRect {
-    NSRect frame = [self frame];
+    NSRect bounds = [self bounds];
 
     [[NSColor redColor] set];
-    [NSBezierPath fillRect: frame];
+    [NSBezierPath fillRect: bounds];
 }
 
 @end

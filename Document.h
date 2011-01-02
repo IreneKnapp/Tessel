@@ -12,4 +12,13 @@
 @interface Document : NSDocument
 {
 }
+
+- (id) init;
+- (NSString *) windowNibName;
+- (void) windowControllerDidLoadNib: (NSWindowController *) controller;
+- (NSData *) dataOfType: (NSString *) typeName error: (NSError **) outError;
+- (BOOL) readFromData: (NSData *) data
+	       ofType: (NSString *) typeName
+		error: (NSError **) outError;
+- (IBAction) insertLayer: (id) sender;
 @end
