@@ -11,5 +11,6 @@
 
 @interface Document : NSDocument
 {
+    IBOutlet NSWindow *initialWindow;
 }
 @end

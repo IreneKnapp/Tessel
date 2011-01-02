@@ -24,6 +24,13 @@
 
 
 - (void) windowControllerDidLoadNib: (NSWindowController *) controller {
+    NSScreen *screen = [[NSScreen screens] objectAtIndex: 0];
+    NSRect screenFrame = [screen visibleFrame];
+    NSPoint topLeftPoint
+	= NSMakePoint(48.0 + screenFrame.origin.x,
+		      screenFrame.origin.y + screenFrame.size.height);
+    [initialWindow setFrameTopLeftPoint: topLeftPoint];
+    
     [super windowControllerDidLoadNib: controller];
 }
 
