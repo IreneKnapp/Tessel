@@ -14,4 +14,7 @@
 }
 
 - (void) finishLaunching;
+- (void) mainWindowChangedNotification: (NSNotification *) notification;
+- (BOOL) documentMenuEnabled;
+- (IBAction) documentInsertLayer: (id) sender;
 @end

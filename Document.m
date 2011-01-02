@@ -29,7 +29,7 @@
     NSPoint topLeftPoint
 	= NSMakePoint(48.0 + screenFrame.origin.x,
 		      screenFrame.origin.y + screenFrame.size.height);
-    [initialWindow setFrameTopLeftPoint: topLeftPoint];
+    [[controller window] setFrameTopLeftPoint: topLeftPoint];
     
     [super windowControllerDidLoadNib: controller];
 }
