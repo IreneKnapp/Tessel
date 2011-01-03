@@ -17,4 +17,5 @@
 - (void) mainWindowChangedNotification: (NSNotification *) notification;
 - (BOOL) documentMenuEnabled;
 - (IBAction) documentInsertLayer: (id) sender;
+- (void) sendEvent: (NSEvent *) event;
 @end

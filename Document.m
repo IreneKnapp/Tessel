@@ -7,14 +7,21 @@
 //
 
 #import "Document.h"
+#import <SQLite-Objc/SQLDatabase.h>
 
 @implementation Document
 
 - (id) init {
     self = [super init];
     if (self) {
+	database = [SQLDatabase databaseInMemory];
     }
     return self;
+}
+
+
+- (void) close {
+    [database close];
 }
 
 

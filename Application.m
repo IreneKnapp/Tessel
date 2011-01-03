@@ -71,4 +71,13 @@
     }
 }
 
+
+- (void) sendEvent: (NSEvent *) event {
+    @try {
+	[super sendEvent: event];
+    } @catch(NSException *exception) {
+	NSLog(@"Uncaught exception %@", exception);
+    }
+}
+
 @end

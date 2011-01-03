@@ -9,11 +9,14 @@
 
 #import <Cocoa/Cocoa.h>
 
+@class SQLDatabase;
 @interface Document : NSDocument
 {
+    SQLDatabase *database;
 }
 
 - (id) init;
+- (void) close;
 - (NSString *) windowNibName;
 - (void) windowControllerDidLoadNib: (NSWindowController *) controller;
 - (NSData *) dataOfType: (NSString *) typeName error: (NSError **) outError;

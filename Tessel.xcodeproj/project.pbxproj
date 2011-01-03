@@ -16,7 +16,40 @@
 		8D15AC340486D014006FF6A4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */; };
 		E26C89D712D05D98000CDDF4 /* ContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = E26C89D612D05D98000CDDF4 /* ContentView.m */; };
 		E26C89ED12D05FF1000CDDF4 /* Application.m in Sources */ = {isa = PBXBuildFile; fileRef = E26C89EC12D05FF1000CDDF4 /* Application.m */; };
+		E26C8CF312D21E8E000CDDF4 /* SQLite-ObjC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E26C8CF212D21E85000CDDF4 /* SQLite-ObjC.framework */; };
+		E26C8CF412D21E93000CDDF4 /* SQLite-ObjC.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = E26C8CF212D21E85000CDDF4 /* SQLite-ObjC.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E26C8CF112D21E85000CDDF4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E26C8CED12D21E85000CDDF4 /* SQLite-ObjC.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8DC2EF5B0486A6940098B216 /* SQLite-ObjC.framework */;
+			remoteInfo = "SQLite-ObjC";
+		};
+		E26C8CFB12D21EB7000CDDF4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E26C8CED12D21E85000CDDF4 /* SQLite-ObjC.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8DC2EF4F0486A6940098B216 /* SQLite-ObjC */;
+			remoteInfo = "SQLite-ObjC";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E26C8CD912D21E02000CDDF4 /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E26C8CF412D21E93000CDDF4 /* SQLite-ObjC.framework in Copy Frameworks */,
+			);
+			name = "Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		089C1660FE840EACC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -37,6 +70,7 @@
 		E26C89D612D05D98000CDDF4 /* ContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentView.m; sourceTree = "<group>"; };
 		E26C89EB12D05FF1000CDDF4 /* Application.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Application.h; sourceTree = "<group>"; };
 		E26C89EC12D05FF1000CDDF4 /* Application.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Application.m; sourceTree = "<group>"; };
+		E26C8CED12D21E85000CDDF4 /* SQLite-ObjC.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "SQLite-ObjC.xcodeproj"; path = "../SQLite-ObjC/SQLite-ObjC.xcodeproj"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +79,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D15AC340486D014006FF6A4 /* Cocoa.framework in Frameworks */,
+				E26C8CF312D21E8E000CDDF4 /* SQLite-ObjC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +115,7 @@
 		2A37F4AAFDCFA73011CA2CEA /* Tessel */ = {
 			isa = PBXGroup;
 			children = (
+				E26C8CED12D21E85000CDDF4 /* SQLite-ObjC.xcodeproj */,
 				2A37F4ABFDCFA73011CA2CEA /* Classes */,
 				2A37F4AFFDCFA73011CA2CEA /* Other Sources */,
 				2A37F4B8FDCFA73011CA2CEA /* Resources */,
@@ -132,6 +168,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E26C8CEE12D21E85000CDDF4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E26C8CF212D21E85000CDDF4 /* SQLite-ObjC.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -139,6 +183,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C05733C708A9546B00998B17 /* Build configuration list for PBXNativeTarget "Tessel" */;
 			buildPhases = (
+				E26C8CD912D21E02000CDDF4 /* Copy Frameworks */,
 				8D15AC2B0486D014006FF6A4 /* Resources */,
 				8D15AC300486D014006FF6A4 /* Sources */,
 				8D15AC330486D014006FF6A4 /* Frameworks */,
@@ -146,6 +191,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				E26C8CFC12D21EB7000CDDF4 /* PBXTargetDependency */,
 			);
 			name = Tessel;
 			productInstallPath = "$(HOME)/Applications";
@@ -166,12 +212,28 @@
 			hasScannedForEncodings = 1;
 			mainGroup = 2A37F4AAFDCFA73011CA2CEA /* Tessel */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = E26C8CEE12D21E85000CDDF4 /* Products */;
+					ProjectRef = E26C8CED12D21E85000CDDF4 /* SQLite-ObjC.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				8D15AC270486D014006FF6A4 /* Tessel */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		E26C8CF212D21E85000CDDF4 /* SQLite-ObjC.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = "SQLite-ObjC.framework";
+			remoteRef = E26C8CF112D21E85000CDDF4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		8D15AC2B0486D014006FF6A4 /* Resources */ = {
@@ -200,6 +262,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E26C8CFC12D21EB7000CDDF4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "SQLite-ObjC";
+			targetProxy = E26C8CFB12D21EB7000CDDF4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		089C165FFE840EACC02AAC07 /* InfoPlist.strings */ = {
@@ -242,6 +312,11 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../SQLite-ObjC/build/Release\"",
+					"\"$(SRCROOT)/../../Library/Frameworks\"",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
@@ -259,6 +334,11 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../SQLite-ObjC/build/Release\"",
+					"\"$(SRCROOT)/../../Library/Frameworks\"",
+				);
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Tessel_Prefix.pch;
